@@ -4,9 +4,57 @@
   <meta charset="UTF-8">
   <title>Hello World PWA</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, World! 🥹</h1>
+  <div class="container">
+    <h1>Welcome to Hello World PWA</h1>
+    <p>Your innovative solution for saying hello to the world.</p>
+    <a class="cta-button" href="#">Get Started</a>
+  </div>
+
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
@@ -20,4 +68,3 @@
   </script>
 </body>
 </html>
-
