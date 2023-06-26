@@ -46,16 +46,27 @@
     .cta-button:hover {
       background-color: #0056b3;
     }
+
+    .emoji {
+      font-size: 200px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Welcome to Hello World PWA</h1>
     <p>Your innovative solution for saying hello to the world.</p>
-    <a class="cta-button" href="#">Get Started</a>
+    <a class="cta-button" href="#" onclick="showEmoji()">Get Started</a>
+    <div id="emojiContainer"></div>
   </div>
 
   <script>
+    function showEmoji() {
+      const emojiContainer = document.getElementById('emojiContainer');
+      emojiContainer.innerHTML = '🥹';
+      emojiContainer.classList.add('emoji');
+    }
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(function(registration) {
